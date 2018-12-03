@@ -144,7 +144,7 @@ node("pravega") {
 
         sh("curl -k -f ${getPlatformUrl(platformBranch, platformBuild)}/artifact/go/build/linux-jarvis > jarvis")
         sh("chmod +x jarvis")
-        sh("jarvis save $clusterName)
+        sh("jarvis save $clusterName")
         // ensure kubectl is able to talk to the cluster.
 
         dir ("pravega") {
